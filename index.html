@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #41a895, #364588);
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    h2 {
+      color: #141d26;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bolder;
+    }
+
+    p {
+      background: #cdcdcd;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .highlight {
+      color: #27ae60;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2> Simple Interest Calculator </h2>
+
+  <script>
+    // number variables
+    const principal = 3750;   // starting money
+    const rate = 0.2;         // 20%
+    const time = 7;           // 7 years
+
+    // interest & totalAmount calculation
+    const interest = principal * rate * time;
+    const totalAmount = principal + interest;
+
+    // string concat 
+    const text1 = "Fast forward " + time + " years... ";
+    const text2 = "Your money has grown at " + (rate * 100) + "% per year! ";
+    const text3 = "Final balance: <span class='highlight'>N" + totalAmount + "</span> " +
+                  "(which means you earned <span class='highlight'>N" + interest + "</span> in interest).";
+
+    // Display using document.write
+    document.write("<p>" + text1 + "<br>" + text2 + "<br>" + text3 + "</p>");
+  </script>
+</body>
+</html>
