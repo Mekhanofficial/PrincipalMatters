@@ -39,6 +39,18 @@
       color: #27ae60;
       font-weight: bold;
     }
+    .value {
+     display: inline-block;
+     background: #ffffffcc;
+     color: #222;
+     font-weight: bold;
+     padding: 4px 8px;
+     align-items: center;
+     margin: 4px;
+     border-radius: 6px;
+     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+     font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -53,6 +65,11 @@
     // interest & totalAmount calculation
     const interest = principal * rate * time;
     const totalAmount = principal + interest;
+
+    document.write("<span class='value'>" + "principal:" + principal + "</span>");
+    document.write("<span class='value'>" + "rate:" + rate + "</span>");
+    document.write("<span class='value'>" + "time:" + time + "</span>");
+
 
     // string concat 
     const text1 = "Fast forward " + time + " years... ";
